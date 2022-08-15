@@ -24,8 +24,8 @@
         <script>
             // Creating map options
             var mapOptions = {
-                center: [9.96413 , 76.40829],     
-                zoom: 18                          
+                center: [9.96407 , 76.40942],     
+                zoom: 18                  
             }
 
             // Creating a map object
@@ -46,7 +46,7 @@
                     "title" : "Basketball court",
                     "lat" : 9.964288,
                     "long" : 76.408443,
-                    "src" : "basketball.jpg",
+                    "src" : "images/basketball.jpg",
                     "url" : "#"
                 },
                 {
@@ -54,7 +54,95 @@
                     "title" : "Volleyball court",
                     "lat" : 9.964231 ,
                     "long" : 76.408680,
-                    "src" : "volleyball.png",
+                    "src" : "images/volleyball.png",
+                    "url" : "#"
+                },
+                {
+                    "id" : 3 ,
+                    "title" : "Canteen",
+                    "lat" : 9.964344,
+                    "long" : 76.407924,
+                    "src" : "images/canteen.png",
+                    "url" : "#"
+                },
+                {
+                    "id" : 4 ,
+                    "title" : "Basic Science & Humanities Department",
+                    "lat" : 9.96374,  
+                    "long" :  76.40873,
+                    "src" : "images/bsh.png",
+                    "url" : "#"
+                },
+                {
+                    "id" : 5 ,
+                    "title" : "Mechanical Engineering Department",
+                    "lat" : 9.96361, 
+                    "long" :  76.40887,
+                    "src" : "images/me.png",
+                    "url" : "#"
+                },
+                {
+                    "id" : 6 ,
+                    "title" : "Civil Engineering Department",
+                    "lat" : 9.96362,   
+                    "long" :  76.40853,
+                    "src" : "images/ce.png",
+                    "url" : "#"
+                },
+                {
+                    "id" : 7 ,
+                    "title" : "Computer Science Engineering Department",
+                    "lat" : 9.96415,     
+                    "long" :  76.40990,
+                    "src" : "images/cs.png",
+                    "url" : "#"
+                },
+                {
+                    "id" : 8 ,
+                    "title" : "Electrical & Electronics Engineering Department",
+                    "lat" : 9.96393,     
+                    "long" :  76.40986,
+                    "src" : "images/eee.png",
+                    "url" : "#"
+                },
+                {
+                    "id" : 9 ,
+                    "title" : "Electronics & Communication Engineering Department",
+                    "lat" : 9.96377,     
+                    "long" :  76.40969,
+                    "src" : "images/ec.png",
+                    "url" : "#"
+                },
+                {
+                    "id" : 10 ,
+                    "title" : "Cafeteria",
+                    "lat" : 9.96353,     
+                    "long" :  76.40968,
+                    "src" : "images/cafeteria.png",
+                    "url" : "#"
+                },
+                {
+                    "id" : 11 ,
+                    "title" : "Library",
+                    "lat" : 9.96379,     
+                    "long" :  76.40825,
+                    "src" : "images/library.png",
+                    "url" : "#"
+                },
+                {
+                    "id" : 12 ,
+                    "title" : "Girls Hostel",
+                    "lat" : 9.96405,     
+                    "long" :  76.41140,
+                    "src" : "images/ghostel.jpg",
+                    "url" : "#"
+                },
+                {
+                    "id" : 13 ,
+                    "title" : "Mens Hostel",
+                    "lat" : 9.9645,     
+                    "long" :  76.41236,
+                    "src" : "images/mhostel.jpg",
                     "url" : "#"
                 }
 
@@ -72,9 +160,9 @@
                 .on("mouseout",event => {
                     event.target.closePopup();
                 })
-                .on("click" , () => {
-                    window.open(element.url);
-                })
+                // .on("click" , () => {
+                //     window.open(element.url);
+                // })
             });
 
 
