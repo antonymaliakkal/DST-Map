@@ -5,20 +5,42 @@
       <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css" integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ==" crossorigin="" />
       <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js" integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ==" crossorigin=""></script>
       <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
-    </head>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Roboto:ital,wght@1,900&display=swap" rel="stylesheet">
+   </head>
 
    <body>
 
 
     <div class = "main">
         <div class = "text">
-            <p style="font-family: 'Sacramento', cursive;">Department of Science & Technology</p>
+            <div class="img">
+                <img src="images/logo.png" height="100px" style="width:auto ;">
+            </div>
+            <div class="head">    
+                <p>Muthoot Institute of Technology & Science</p>
+            </div>    
         </div>
-        <div id = "map" ></div>
+        <div class="info"
+            <div id = "map" ></div>    
+            <div class="floor">
+                <div class="box" onclick="change('-1')">-1</div>
+                <div class="box" onclick="change('0')">0</div>
+                <div class="box" onclick="change('1')">1</div>
+                <div class="box" onclick="change('2')">2</div>
+                <div class="box" onclick="change('3')">3</div>
+                <div class="box" onclick="change('4')">4</div>
+
+            </div>
+        </div>    
     </div>
+
+
+    <div onclick="change('1')" style="cursor: pointer;">
+    1
+    </div>
+
     
       
         <script>
@@ -38,132 +60,170 @@
             map.addLayer(layer);
 
 
-
-            
             let location1 = [
                 {
                     "id" : 1,
                     "title" : "Basketball court",
+                    "floor" : 0,
                     "lat" : 9.964288,
                     "long" : 76.408443,
                     "src" : "images/basketball.jpg",
-                    "url" : "#"
+                    "url" : "https://mgmits.ac.in/life-mits/sports/"
                 },
                 {
                     "id" : 2,
                     "title" : "Volleyball court",
+                    "floor" : 0,
                     "lat" : 9.964231 ,
                     "long" : 76.408680,
                     "src" : "images/volleyball.png",
-                    "url" : "#"
+                    "url" : "https://mgmits.ac.in/life-mits/sports/"
                 },
                 {
                     "id" : 3 ,
                     "title" : "Canteen",
+                    "floor" : 0,
                     "lat" : 9.964344,
                     "long" : 76.407924,
                     "src" : "images/canteen.png",
-                    "url" : "#"
+                    "url" : "https://mgmits.ac.in/infrastructure/canteen-cafeteria/"
                 },
                 {
                     "id" : 4 ,
                     "title" : "Basic Science & Humanities Department",
+                    "floor" : 3,
                     "lat" : 9.96374,  
                     "long" :  76.40873,
                     "src" : "images/bsh.png",
-                    "url" : "#"
+                    "url" : "https://mgmits.ac.in/departments/basic-science-and-humanities/"
                 },
                 {
                     "id" : 5 ,
                     "title" : "Mechanical Engineering Department",
+                    "floor" : 1,
                     "lat" : 9.96361, 
                     "long" :  76.40887,
                     "src" : "images/me.png",
-                    "url" : "#"
+                    "url" : "https://mgmits.ac.in/departments/mechanical-engineering/"
                 },
                 {
                     "id" : 6 ,
                     "title" : "Civil Engineering Department",
+                    "floor" : 2,
                     "lat" : 9.96362,   
                     "long" :  76.40853,
                     "src" : "images/ce.png",
-                    "url" : "#"
+                    "url" : "https://mgmits.ac.in/departments/civil-engineering/"
                 },
                 {
                     "id" : 7 ,
                     "title" : "Computer Science Engineering Department",
+                    "floor" : 3,
                     "lat" : 9.96415,     
                     "long" :  76.40990,
                     "src" : "images/cs.png",
-                    "url" : "#"
+                    "url" : "https://mgmits.ac.in/departments/computer-science-and-engineering/"
                 },
                 {
                     "id" : 8 ,
                     "title" : "Electrical & Electronics Engineering Department",
+                    "floor" : 4,
                     "lat" : 9.96393,     
                     "long" :  76.40986,
                     "src" : "images/eee.png",
-                    "url" : "#"
+                    "url" : "https://mgmits.ac.in/departments/electrical-and-electronics/"
                 },
                 {
                     "id" : 9 ,
                     "title" : "Electronics & Communication Engineering Department",
+                    "floor" : 1,
                     "lat" : 9.96377,     
                     "long" :  76.40969,
                     "src" : "images/ec.png",
-                    "url" : "#"
+                    "url" : "https://mgmits.ac.in/departments/electronics-and-communication/"
                 },
                 {
                     "id" : 10 ,
                     "title" : "Cafeteria",
+                    "floor" : 0,
                     "lat" : 9.96353,     
                     "long" :  76.40968,
                     "src" : "images/cafeteria.png",
-                    "url" : "#"
+                    "url" : "https://mgmits.ac.in/infrastructure/canteen-cafeteria/"
                 },
                 {
                     "id" : 11 ,
                     "title" : "Library",
+                    "floor" : 0,
                     "lat" : 9.96379,     
                     "long" :  76.40825,
                     "src" : "images/library.png",
-                    "url" : "#"
+                    "url" : "https://mgmits.ac.in/infrastructure/mits-central-library/"
                 },
                 {
                     "id" : 12 ,
                     "title" : "Girls Hostel",
+                    "floor" : 0,
                     "lat" : 9.96405,     
                     "long" :  76.41140,
                     "src" : "images/ghostel.jpg",
-                    "url" : "#"
+                    "url" : "https://mgmits.ac.in/infrastructure/hostel/"
                 },
                 {
                     "id" : 13 ,
                     "title" : "Mens Hostel",
+                    "floor" : 0,
                     "lat" : 9.9645,     
                     "long" :  76.41236,
                     "src" : "images/mhostel.jpg",
-                    "url" : "#"
+                    "url" : "https://mgmits.ac.in/infrastructure/hostel/"
                 }
 
             ]
 
             let popOption = {
                 "closeButton" : false
+            }    
+
+
+            function change(val)
+             {
+                
+                location1.forEach(element => {
+                if(element.floor == val)
+                 { 
+                    new L.Marker([element.lat,element.long]).addTo(map)
+                    .on("mouseover",event =>{
+                        event.target.bindPopup('<div class="card" style="display:flex;"><div><img src="'+element.src+' " width="80" height="80" alt=" ' + element.title + ' " ></div><div><h3>' + element.title + '</h3></div></div>',popOption).openPopup();
+                    })
+                    .on("mouseout",event => {
+                        event.target.closePopup();
+                    })
+                    .on("click" , () => {
+                        window.open(element.url);
+                    })
+                }});
             }
 
-            location1.forEach(element => {
-                new L.Marker([element.lat,element.long]).addTo(map)
-                .on("mouseover",event =>{
-                    event.target.bindPopup('<div class="card" style="display:flex;"><div><img src="'+element.src+' " width="80" height="80" alt=" ' + element.title + ' " ></div><div><h3>' + element.title + '</h3></div></div>',popOption).openPopup();
-                })
-                .on("mouseout",event => {
-                    event.target.closePopup();
-                })
-                // .on("click" , () => {
-                //     window.open(element.url);
-                // })
-            });
+            
+
+            
+
+            // location1.forEach(element => {
+            //     if(element.floor == f)
+            //      { 
+            //         new L.Marker([element.lat,element.long]).addTo(map)
+            //         .on("mouseover",event =>{
+            //             event.target.bindPopup('<div class="card" style="display:flex;"><div><img src="'+element.src+' " width="80" height="80" alt=" ' + element.title + ' " ></div><div><h3>' + element.title + '</h3></div></div>',popOption).openPopup();
+            //         })
+            //         .on("mouseout",event => {
+            //             event.target.closePopup();
+            //         })
+            //         .on("click" , () => {
+            //             window.open(element.url);
+            //         })
+            //     }});
+                
 
 
       </script>
