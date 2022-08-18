@@ -60,6 +60,10 @@ body
     color :rgb(111, 107, 107);
 }
 
+.box:hover
+{
+    background-color: #dcd7d7;
+}
 .click
 {
     background-color: white;
