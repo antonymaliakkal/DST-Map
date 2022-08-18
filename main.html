@@ -185,14 +185,20 @@
                 "closeButton" : false
             }    
 
-
+            let array = []
             function change(val)
              {
-                
+
+                array.forEach(element => {
+                    map.removeLayer(element);
+                })
+
                 location1.forEach(element => {
-                if(element.floor == val)
-                 { 
-                    new L.Marker([element.lat,element.long]).addTo(map)
+                if(element.floor == val)    
+                 {  
+                    x = new L.Marker([element.lat,element.long]); 
+                    array.push(x)
+                    x.addTo(map)
                     .on("mouseover",event =>{
                         event.target.bindPopup('<div class="card" style="display:flex;"><div><img src="'+element.src+' " width="80" height="80" alt=" ' + element.title + ' " ></div><div><h3>' + element.title + '</h3></div></div>',popOption).openPopup();
                     })
@@ -204,27 +210,6 @@
                     })
                 }});
             }
-
-            
-
-            
-
-            // location1.forEach(element => {
-            //     if(element.floor == f)
-            //      { 
-            //         new L.Marker([element.lat,element.long]).addTo(map)
-            //         .on("mouseover",event =>{
-            //             event.target.bindPopup('<div class="card" style="display:flex;"><div><img src="'+element.src+' " width="80" height="80" alt=" ' + element.title + ' " ></div><div><h3>' + element.title + '</h3></div></div>',popOption).openPopup();
-            //         })
-            //         .on("mouseout",event => {
-            //             event.target.closePopup();
-            //         })
-            //         .on("click" , () => {
-            //             window.open(element.url);
-            //         })
-            //     }});
-                
-
 
       </script>
    </body>
