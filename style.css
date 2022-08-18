@@ -38,17 +38,38 @@ body
 .floor
 {
     z-index: 10;
-    background-color: aliceblue;
-    padding: 8px;
     float:right;
     margin-right: 30px;
     margin-top: 285px; 
     display: block;
-    border: .2px solid black;
+    border: 2px solid #c2bfba;
+    border-bottom: 1px solid #c2bfba;
+    border-radius: 4px;
+
     box-shadow: 2px 2px 5px 0px #b59e9e;
+    padding: 0px;
+    width: 30px;
+    text-align: center;
 }
 
 .box
 {
     cursor: pointer;
+    background-color: white;
+    border-bottom: 1px solid #b2a3a3;
+    color :rgb(111, 107, 107);
+}
+
+.click
+{
+    background-color: white;
+    width: fit-content;
+    border-radius: 4px;
+    margin-top: 10px;
+    margin-left: 480px;
+    height: 25px;
+    box-shadow: 3px 3px 3px #d1bebe;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    color :darkgrey;
 }
