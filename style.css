@@ -77,3 +77,26 @@ body
     font-weight: bold;
     color :darkgrey;
 }
+
+
+@media only screen and (max-device-width : 480px )
+{
+    .box
+     {
+        width: 30px;
+        height: 40px;
+     }
+
+   .head
+   {
+    font-size: 32px;
+   }  
+
+   .click
+   {
+     margin-left: 300px;
+   }
+
+
+
+}
