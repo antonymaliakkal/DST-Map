@@ -1,8 +1,5 @@
 body
 {
-    /* background-image: linear-gradient(to right , #ADCCEF , #E7F0FD) */
-    /* background-image: linear-gradient(to right ,  #6DD5FA , #FFFFFF ); */
-    font-family: 'Sacramento', cursive;
     border: none;
     margin: 0px;
 }
@@ -38,15 +35,17 @@ body
 .floor
 {
     z-index: 10;
-    float:right;
-    margin-right: 30px;
-    margin-top: 285px; 
+
+    position: absolute;    
+    bottom: 32px;
+    right: 25px;
+   
     display: block;
     border: 2px solid #c2bfba;
     border-bottom: 1px solid #c2bfba;
     border-radius: 4px;
 
-    box-shadow: 2px 2px 5px 0px #b59e9e;
+    box-shadow: 2px 3px 6px 0px #c3b2b2;
     padding: 0px;
     width: 30px;
     text-align: center;
@@ -57,7 +56,8 @@ body
     cursor: pointer;
     background-color: white;
     border-bottom: 1px solid #b2a3a3;
-    color :rgb(111, 107, 107);
+    color: rgb(98 88 88);
+    font-family: 'Open Sans', sans-serif;
 }
 
 .box:hover
@@ -68,6 +68,7 @@ body
 {
     background-color: white;
     width: fit-content;
+    padding: 1px 6px;
     border-radius: 4px;
     margin-top: 10px;
     margin-left: 480px;
@@ -79,8 +80,19 @@ body
 }
 
 
-@media only screen and (max-device-width : 480px )
+@media only screen and (max-device-width : 767px )
 {
+
+    .text
+     {
+        height: 10vh;
+     }
+
+    #map
+    {
+        height: 90vh;
+    }
+
     .box
      {
         width: 30px;
@@ -88,14 +100,14 @@ body
      }
 
    .head
-   {
+    {
     font-size: 32px;
-   }  
+    }  
 
    .click
-   {
+    {
      margin-left: 300px;
-   }
+    }
 
 
 
