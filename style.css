@@ -9,7 +9,7 @@ body
 .text
 {
     display: flex;
-    /* margin: 0px; */
+    /* margin: 0px; */ 
     align-items: center;
     justify-content: space-around;
     text-align: left;
